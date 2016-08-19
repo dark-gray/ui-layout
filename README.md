@@ -57,7 +57,7 @@ var myAppModule = angular.module('MyApp', ['ui.layout']);
 
 Add the directive like so:
 
-```xml
+```html
 <div ui-layout="{ flow : 'row' }"></div>
 or
 <ui-layout options="{ flow : 'row' }"></ui-layout>
@@ -65,7 +65,7 @@ or
 
 If using a `layout-container` with `ng-repeat`, make sure to include a `track by` clause to the repeat, typically with $index:
 
-```xml
+```html
 <div ui-layout="{flow : 'column'}" class="maincontainer" >
   <div ui-layout-container ng-repeat="item in items track by $index"></div>
 </div>
@@ -109,7 +109,7 @@ Like `disableToggle` above but only removes the arrows on mobile devices (max-de
 
 Required on all child elements of the ui-layout element.
 
-```
+```html
 <div ui-layout>
     <div ui-layout-container></div>    
     <div ui-layout-container></div>    
@@ -118,7 +118,7 @@ Required on all child elements of the ui-layout element.
 
 ### Options
 A string value `'central'` can be passed to the directive:
-```xml
+```html
 <div ui-layout>
     <div ui-layout-container></div>    
     <div ui-layout-container="central"></div>    
@@ -131,7 +131,7 @@ The `'central'` container takes up all the remaining space during resizing, rega
 ### collapsed [collapsed]
 Type: `boolean`
 
-```xml
+```html
 <div ui-layout>
     <div ui-layout-container collapsed="true"></div>    
     <div ui-layout-container collapsed="layout.mycontainer"></div>    
@@ -154,7 +154,7 @@ Type: `String`
 
 Sets the default placement of the splitbar.
 
-```
+```html
 pixels
 <div ui-layout>
     <div ui-layout-container size="100px"></div>
@@ -173,7 +173,7 @@ Default: `'8px'`
 
 Specifices the minimum size the child element can be set to. Defaults to the width of the `splitbar` if no value is provided.
 
-```
+```html
 pixels
 <div ui-layout>
     <div ui-layout-container min-size="100px"></div>
@@ -191,7 +191,7 @@ Type: `String`
 
 Specifices the maxium size the child element can be set to.
 
-```
+```html
 pixels
 <div ui-layout>
     <div ui-layout-container max-size="100px"></div>
@@ -223,7 +223,7 @@ All this means that the user will notice a flicker. If the flicker is not desira
 
 
 
-```xml
+```html
 <div id="main-container" ui-layout ui-layout-loaded>
     <div ui-layout-container>
       <div ui-layout ui-layout-loaded="child-container">
@@ -252,7 +252,7 @@ $scope.$on('ui.layout.loaded', function(evt, id) => {
 
 Note: the value of the attribute is not evaluated, so:
 
-```
+```javascript
 $scope.layout = {
   mySidebar: {someKey: 'some value'}
 }
