@@ -1,37 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Ui-layout : This directive allows you to split !">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Ui-layout</title>
+    <meta charset="UTF-8">
+    <title>Ui-layout by dark-gray</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Ui-layout</h1>
+      <h2 class="project-tagline">This directive allows you to split !</h2>
+      <a href="https://github.com/dark-gray/ui-layout" class="btn">View on GitHub</a>
+      <a href="https://github.com/dark-gray/ui-layout/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/dark-gray/ui-layout/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/dark-gray/ui-layout">View on GitHub</a>
-
-          <h1 id="project_title">Ui-layout</h1>
-          <h2 id="project_tagline">This directive allows you to split !</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/dark-gray/ui-layout/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/dark-gray/ui-layout/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
+    <section class="main-content">
+      <h3>
 <a id="forked-from-angular-uiui-layout" class="anchor" href="#forked-from-angular-uiui-layout" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><em><strong>Forked from <a href="https://github.com/angular-ui/ui-layout">angular-ui/ui-layout</a></strong></em>
 </h3>
 
@@ -91,14 +79,14 @@ bower install angular-ui-layout<span class="pl-cce">\#</span>src0.0.0</pre></div
 
 <p>Add the directive like so:</p>
 
-<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>=<span class="pl-s"><span class="pl-pds">"</span>{ flow : 'row' }<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>=<span class="pl-s"><span class="pl-pds">"</span>{ flow : 'row' }<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
 or
-&lt;<span class="pl-ent">ui-layout</span> <span class="pl-e">options</span>=<span class="pl-s"><span class="pl-pds">"</span>{ flow : 'row' }<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">ui-layout</span>&gt;</pre></div>
+&lt;<span class="pl-ent">ui</span><span class="pl-e">-layout</span> <span class="pl-e">options</span>=<span class="pl-s"><span class="pl-pds">"</span>{ flow : 'row' }<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">ui</span><span class="pl-e">-layout</span>&gt;</pre></div>
 
 <p>If using a <code>layout-container</code> with <code>ng-repeat</code>, make sure to include a <code>track by</code> clause to the repeat, typically with $index:</p>
 
-<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>=<span class="pl-s"><span class="pl-pds">"</span>{flow : 'column'}<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>maincontainer<span class="pl-pds">"</span></span> &gt;
-  &lt;<span class="pl-ent">div</span> ui-layout-container <span class="pl-e">ng-repeat</span>=<span class="pl-s"><span class="pl-pds">"</span>item in items track by $index<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>=<span class="pl-s"><span class="pl-pds">"</span>{flow : 'column'}<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>maincontainer<span class="pl-pds">"</span></span> &gt;
+  &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span> <span class="pl-e">ng-repeat</span>=<span class="pl-s"><span class="pl-pds">"</span>item in items track by $index<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
 &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <h2>
@@ -145,21 +133,20 @@ Default: <code>false</code></p>
 
 <p>Required on all child elements of the ui-layout element.</p>
 
-<pre><code>&lt;div ui-layout&gt;
-    &lt;div ui-layout-container&gt;&lt;/div&gt;    
-    &lt;div ui-layout-container&gt;&lt;/div&gt;    
-&lt;/div&gt;
-</code></pre>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <h3>
 <a id="options-1" class="anchor" href="#options-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h3>
 
 <p>A string value <code>'central'</code> can be passed to the directive:</p>
 
-<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">div</span> ui-layout&gt;
-    &lt;<span class="pl-ent">div</span> ui-layout-container&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
     &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span>=<span class="pl-s"><span class="pl-pds">"</span>central<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
-    &lt;<span class="pl-ent">div</span> ui-layout-container&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
 &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <p>The <code>'central'</code> container takes up all the remaining space during resizing, regardless of previous state, e.g. after splitbar drag.</p>
@@ -169,9 +156,9 @@ Default: <code>false</code></p>
 
 <p>Type: <code>boolean</code></p>
 
-<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">div</span> ui-layout&gt;
-    &lt;<span class="pl-ent">div</span> ui-layout-container <span class="pl-e">collapsed</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
-    &lt;<span class="pl-ent">div</span> ui-layout-container <span class="pl-e">collapsed</span>=<span class="pl-s"><span class="pl-pds">"</span>layout.mycontainer<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span> <span class="pl-e">collapsed</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span> <span class="pl-e">collapsed</span>=<span class="pl-s"><span class="pl-pds">"</span>layout.mycontainer<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
 &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <p>Controls collapsed state of the container. Application can store the state of the layout e.g. like so:</p>
@@ -191,16 +178,15 @@ Default: <code>false</code></p>
 
 <p>Sets the default placement of the splitbar.</p>
 
-<pre><code>pixels
-&lt;div ui-layout&gt;
-    &lt;div ui-layout-container size="100px"&gt;&lt;/div&gt;
-&lt;/div&gt;
+<div class="highlight highlight-text-html-basic"><pre>pixels
+&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span> <span class="pl-e">size</span>=<span class="pl-s"><span class="pl-pds">"</span>100px<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;
 
 percentage
-&lt;div ui-layout&gt;
-    &lt;div ui-layout-container size="10%"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span> <span class="pl-e">size</span>=<span class="pl-s"><span class="pl-pds">"</span>10%<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <h3>
 <a id="minsize" class="anchor" href="#minsize" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>minSize</h3>
@@ -210,16 +196,15 @@ Default: <code>'8px'</code></p>
 
 <p>Specifices the minimum size the child element can be set to. Defaults to the width of the <code>splitbar</code> if no value is provided.</p>
 
-<pre><code>pixels
-&lt;div ui-layout&gt;
-    &lt;div ui-layout-container min-size="100px"&gt;&lt;/div&gt;
-&lt;/div&gt;
+<div class="highlight highlight-text-html-basic"><pre>pixels
+&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span> <span class="pl-e">min-size</span>=<span class="pl-s"><span class="pl-pds">"</span>100px<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;
 
 percentage
-&lt;div ui-layout&gt;
-    &lt;div ui-layout-container min-size="10%"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span> <span class="pl-e">min-size</span>=<span class="pl-s"><span class="pl-pds">"</span>10%<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <h3>
 <a id="maxsize" class="anchor" href="#maxsize" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>maxSize</h3>
@@ -228,16 +213,15 @@ percentage
 
 <p>Specifices the maxium size the child element can be set to.</p>
 
-<pre><code>pixels
-&lt;div ui-layout&gt;
-    &lt;div ui-layout-container max-size="100px"&gt;&lt;/div&gt;
-&lt;/div&gt;
+<div class="highlight highlight-text-html-basic"><pre>pixels
+&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span> <span class="pl-e">max-size</span>=<span class="pl-s"><span class="pl-pds">"</span>100px<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;
 
 percentage
-&lt;div ui-layout&gt;
-    &lt;div ui-layout-container max-size="10%"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span> <span class="pl-e">max-size</span>=<span class="pl-s"><span class="pl-pds">"</span>10%<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <h2>
 <a id="events" class="anchor" href="#events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Events</h2>
@@ -265,10 +249,10 @@ percentage
 
 <p>All this means that the user will notice a flicker. If the flicker is not desirable, hide the layout behind an overlay, wait for the <code>ui.layout.loaded</code> event. In the "automatic" mode, all is done and the layout should be presentable. In the "manual" mode it is up to the application to count the <code>ui.layout.toggle</code> events.</p>
 
-<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>main-container<span class="pl-pds">"</span></span> ui-layout ui-layout-loaded&gt;
-    &lt;<span class="pl-ent">div</span> ui-layout-container&gt;
-      &lt;<span class="pl-ent">div</span> ui-layout <span class="pl-e">ui-layout-loaded</span>=<span class="pl-s"><span class="pl-pds">"</span>child-container<span class="pl-pds">"</span></span>&gt;
-          &lt;<span class="pl-ent">div</span> ui-layout-container&gt;
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>main-container<span class="pl-pds">"</span></span> <span class="pl-e">ui-layout</span> <span class="pl-e">ui-layout-loaded</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span>&gt;
+      &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span> <span class="pl-e">ui-layout-loaded</span>=<span class="pl-s"><span class="pl-pds">"</span>child-container<span class="pl-pds">"</span></span>&gt;
+          &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span>&gt;
 
           &lt;/<span class="pl-ent">div</span>&gt;
       &lt;/<span class="pl-ent">div</span>&gt;
@@ -290,13 +274,12 @@ percentage
 
 <p>Note: the value of the attribute is not evaluated, so:</p>
 
-<pre><code>$scope.layout = {
-  mySidebar: {someKey: 'some value'}
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-smi">layout</span> <span class="pl-k">=</span> {
+  mySidebar<span class="pl-k">:</span> {someKey<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>some value<span class="pl-pds">'</span></span>}
 }
 
-&lt;div id='my-sidebar' ui-layout ui-layout-loaded="layout.mySidebar.someKey"&gt;&lt;/div&gt;
-// $scope.$on will receive the string 'layout.mySidebar.someKey'
-</code></pre>
+<span class="pl-k">&lt;</span>div id<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>my-sidebar<span class="pl-pds">'</span></span> ui<span class="pl-k">-</span>layout ui<span class="pl-k">-</span>layout<span class="pl-k">-</span>loaded<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>layout.mySidebar.someKey<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>div<span class="pl-k">&gt;</span>
+<span class="pl-c">// $scope.$on will receive the string 'layout.mySidebar.someKey'</span></pre></div>
 
 <h3>
 <a id="uilayouttoggle-event-toggle" class="anchor" href="#uilayouttoggle-event-toggle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ui.layout.toggle [event-toggle]</h3>
@@ -346,18 +329,15 @@ gulp</pre></div>
 </ul>
 
 <p>** <code>gulp serve</code> runs and watches all**</p>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Ui-layout maintained by <a href="https://github.com/dark-gray">dark-gray</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/dark-gray/ui-layout">Ui-layout</a> is maintained by <a href="https://github.com/dark-gray">dark-gray</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
