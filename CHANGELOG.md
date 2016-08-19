@@ -1,3 +1,20 @@
+<a name="1.4.2"></a>
+# [1.4.2](https://github.com/angular-ui/ui-layout/compare/v1.4.2...v1.4.1)
+
+
+<a name="1.4.1"></a>
+# [1.4.1](https://github.com/angular-ui/ui-layout/compare/v1.4.1...v1.4.0)
+
+
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/angular-ui/ui-layout/compare/v1.4.0...v1.3.1)
+
+
+
+<a name="1.3.1"></a>
+# [1.3.1](https://github.com/angular-ui/ui-layout/compare/v1.3.1...v1.3.0)
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/angular-ui/ui-layout/compare/v1.2.3...v1.3.0) (2015-09-12)
 
