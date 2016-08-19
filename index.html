@@ -1,260 +1,363 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8"/>
-  <title>Angular UI ~ UI.Layout Doc</title>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ui-layout : This directive allows you to split !">
 
-  <!-- Le css -->
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
-  <link rel="stylesheet" type="text/css" href="assets/css/prettify.css"/>
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <link rel="stylesheet" type="text/css" href="demo/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="dist/ui-layout.css"/>
+    <title>Ui-layout</title>
+  </head>
 
+  <body>
 
-</head>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dark-gray/ui-layout">View on GitHub</a>
 
-<body>
+          <h1 id="project_title">Ui-layout</h1>
+          <h2 id="project_tagline">This directive allows you to split !</h2>
 
-<!-- Le navbar
-================================================== -->
-<div class="navbar navbar-default navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <div class="navbar-header">
-      </div>
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="" class="navbar-brand">UI.Layout</a>
-        </li>
-        <li class="pull-right">
-          <a href="http://angular-ui.github.io">by AngularUI</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Le header
-================================================== -->
-<header class="bs-header">
-  <div class="container">
-
-    <h1>UI.Layout</h1>
-
-    <p>This directive allows you to split !</p>
-
-    <p>
-      <a class="btn btn-outline-inverse btn-lg" href="https://github.com/angular-ui/ui-layout">Code on Github</a>
-      <a class="btn btn-outline-inverse btn-lg" href="https://github.com/angular-ui/ui-layout/releases/tag/v0.0.0">
-        <i class="glyphicon glyphicon-download-alt"></i> Download <small>(0.0.0)</small>
-     </a>
-    </p>
-  </div>
-  <div class="bs-social container">
-      <ul class="bs-social-buttons list-inline list-unstyled">
-          <li>
-              <iframe
-            src="http://ghbtns.com/github-btn.html?user=angular-ui&amp;repo=ui-layout&amp;type=watch&amp;count=true"
-            allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-          </li>
-          <li>
-             <iframe
-            src="http://ghbtns.com/github-btn.html?user=angular-ui&amp;repo=ui-layout&amp;type=fork&amp;count=true"
-            allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-          </li>
-          <li>
-              <a href="https://twitter.com/share" class="twitter-share-button"
-                 data-hashtags="angularjs">Tweet</a>
-              <script>!function (d, s, id) {
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (!d.getElementById(id)) {
-                      js = d.createElement(s);
-                      js.id = id;
-                      js.src = "//platform.twitter.com/widgets.js";
-                      fjs.parentNode.insertBefore(js, fjs);
-                  }
-              }(document, "script", "twitter-wjs");</script>
-          </li>
-          <li>
-              <!-- Place this tag where you want the +1 button to render. -->
-              <div class="g-plusone" data-size="medium"></div>
-
-              <!-- Place this tag after the last +1 button tag. -->
-              <script type="text/javascript">
-                  (function () {
-                      var po = document.createElement('script');
-                      po.type = 'text/javascript';
-                      po.async = true;
-                      po.src = 'https://apis.google.com/js/plusone.js';
-                      var s = document.getElementsByTagName('script')[0];
-                      s.parentNode.insertBefore(po, s);
-                  })();
-              </script>
-          </li>
-      </ul>
-  </div>
-</header>
-
-<!-- Le main
-================================================== -->
-<div class="container">
-
-  <section id="layout" ng-app="doc.ui-layout">
-
-<!-- =Minimal code
---------------------------------------------------------------------------- -->
-<div id="demo-mini">
-  <div class="page-header">
-    <h1>Minimal code</h1>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-     <div style="position: relative; height: 220px;">
-        <div ui-layout class="layout-mock">
-         <div class="center-back"></div>
-       </div>
-     </div>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/dark-gray/ui-layout/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/dark-gray/ui-layout/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
     </div>
 
-    <div class="col-md-6" ng-controller="PlunkerCtrl"
-         ng-init="
-vendor_css=['https://rawgithub.com/angular-ui/ui-layout/master/src/ui-layout.css'];
-vendor_js=['https://rawgithub.com/angular-ui/ui-layout/master/src/ui-layout.js'];
-      "
-        >
-      <div class="pull-right">
-        <button class="btn btn-info" ng-click="edit('1.2.6', 'UI.Layout', 'ui-layout')">
-          <i class="glyphicon glyphicon-edit"></i> Edit in plunker
-        </button>
-      </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="forked-from-angular-uiui-layout" class="anchor" href="#forked-from-angular-uiui-layout" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><em><strong>Forked from <a href="https://github.com/angular-ui/ui-layout">angular-ui/ui-layout</a></strong></em>
+</h3>
 
-      <tabset>
-        <tab heading="Markup">
-          <div plunker-content="markup">
-<pre class="prettyprint">&lt;div ui-layout class=&quot;layout-mock&quot;&gt;
-  &lt;div class=&quot;center-back&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
-          </div>
-        </tab>
-        <tab heading="CSS">
-          <div plunker-content="css">
-<pre class="prettyprint">.layout-mock *:not(.ui-splitbar){
-  background : #eee no-repeat center;
+<h1>
+<a id="uilayout-directive-" class="anchor" href="#uilayout-directive-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UI.Layout directive <a href="https://travis-ci.org/angular-ui/ui-layout"><img src="https://travis-ci.org/angular-ui/ui-layout.svg" alt="Build Status"></a>
+</h1>
+
+<p>This directive allows you to split stuff !
+<a href="http://plnkr.co/zB4mhgJyVz7GlwG8JmeM">Holy grail demo</a></p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>AngularJS</li>
+</ul>
+
+<p><strong>NOTE :</strong> if you use IE&lt;=9, iOS&lt;7 or Android&lt;4 please include the <a href="https://github.com/darius/requestAnimationFrame/blob/master/requestAnimationFrame.js">requestAnimationFrame polyfill</a> in your application.</p>
+
+<p><strong>NOTE :</strong> version 1.x is only compatible with IE&gt;=10. If you use IE&lt;=9 you need to use version 0.x</p>
+
+<h2>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing</h2>
+
+<h3>
+<a id="browserifywebpack" class="anchor" href="#browserifywebpack" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Browserify/WebPack</h3>
+
+<div class="highlight highlight-source-shell"><pre>npm install --save angular-ui-layout</pre></div>
+
+<p><code>module.exports</code> of <code>index.js</code> is the string <code>'ui.layout'</code> so you can include it as such:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">angular</span>.<span class="pl-en">module</span>(<span class="pl-s"><span class="pl-pds">'</span>myApp<span class="pl-pds">'</span></span>, [<span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>angular-ui-layout<span class="pl-pds">'</span></span>)]);</pre></div>
+
+<h3>
+<a id="bower" class="anchor" href="#bower" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://bower.io/">Bower</a>
+</h3>
+
+<div class="highlight highlight-source-shell"><pre>bower install angular-ui-layout<span class="pl-cce">\#</span>bower
+<span class="pl-c"># or</span>
+bower install angular-ui-layout<span class="pl-cce">\#</span>v0.0.0
+<span class="pl-c"># or</span>
+bower install angular-ui-layout<span class="pl-cce">\#</span>src0.0.0</pre></div>
+
+<p>This will copy the UI.Layout files into a <code>bower_components</code> folder, along with its dependencies. Load the script files in your application:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/angular-ui-layout/ui-layout.css<span class="pl-pds">"</span></span>/&gt;
+<span class="pl-c">&lt;!-- ... --&gt;</span>
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/raf/index.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/angular-ui-layout/ui-layout.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Add the UI.Layout module as a dependency to your application module:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> myAppModule <span class="pl-k">=</span> <span class="pl-smi">angular</span>.<span class="pl-en">module</span>(<span class="pl-s"><span class="pl-pds">'</span>MyApp<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>ui.layout<span class="pl-pds">'</span></span>]);</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Add the directive like so:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>=<span class="pl-s"><span class="pl-pds">"</span>{ flow : 'row' }<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+or
+&lt;<span class="pl-ent">ui-layout</span> <span class="pl-e">options</span>=<span class="pl-s"><span class="pl-pds">"</span>{ flow : 'row' }<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">ui-layout</span>&gt;</pre></div>
+
+<p>If using a <code>layout-container</code> with <code>ng-repeat</code>, make sure to include a <code>track by</code> clause to the repeat, typically with $index:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout</span>=<span class="pl-s"><span class="pl-pds">"</span>{flow : 'column'}<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>maincontainer<span class="pl-pds">"</span></span> &gt;
+  &lt;<span class="pl-ent">div</span> ui-layout-container <span class="pl-e">ng-repeat</span>=<span class="pl-s"><span class="pl-pds">"</span>item in items track by $index<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h2>
+
+<h3>
+<a id="flow" class="anchor" href="#flow" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>flow</h3>
+
+<p>Type: <code>String</code>
+Default: <code>'row'</code>
+<code>flow: row | column</code></p>
+
+<p>A fake <a href="http://www.w3.org/TR/css3-flexbox/#flex-direction">flex-direction property</a>. It specifies how the child elements are placed in the layout container, by setting the direction of the flex container's main axis. This determines the direction that child elements are laid out in.</p>
+
+<h3>
+<a id="dividersize" class="anchor" href="#dividersize" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>dividerSize</h3>
+
+<p>Type: <code>Integer</code>
+Default: <code>10</code></p>
+
+<p>The size in pixels that you want the divider/splitbar to be. Set to <code>0</code> to hide the splitbar, which in turn prevents user resizing the surrounding containers.</p>
+
+<h3>
+<a id="disabletoggle" class="anchor" href="#disabletoggle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>disableToggle</h3>
+
+<p>Type: <code>Boolean</code>
+Default: <code>false</code></p>
+
+<p>Set to <code>true</code> if you don't want the toggle arrows appearing in the splitbar.</p>
+
+<h3>
+<a id="disablemobiletoggle" class="anchor" href="#disablemobiletoggle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>disableMobileToggle</h3>
+
+<p>Type: <code>Boolean</code>
+Default: <code>false</code></p>
+
+<p>Like <code>disableToggle</code> above but only removes the arrows on mobile devices (max-device-width: 480px).</p>
+
+<h2>
+<a id="child-attributes" class="anchor" href="#child-attributes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Child Attributes</h2>
+
+<h3>
+<a id="uilayoutcontainer" class="anchor" href="#uilayoutcontainer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>uiLayoutContainer</h3>
+
+<p>Required on all child elements of the ui-layout element.</p>
+
+<pre><code>&lt;div ui-layout&gt;
+    &lt;div ui-layout-container&gt;&lt;/div&gt;    
+    &lt;div ui-layout-container&gt;&lt;/div&gt;    
+&lt;/div&gt;
+</code></pre>
+
+<h3>
+<a id="options-1" class="anchor" href="#options-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h3>
+
+<p>A string value <code>'central'</code> can be passed to the directive:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">div</span> ui-layout&gt;
+    &lt;<span class="pl-ent">div</span> ui-layout-container&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">ui-layout-container</span>=<span class="pl-s"><span class="pl-pds">"</span>central<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+    &lt;<span class="pl-ent">div</span> ui-layout-container&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>The <code>'central'</code> container takes up all the remaining space during resizing, regardless of previous state, e.g. after splitbar drag.</p>
+
+<h3>
+<a id="collapsed-collapsed" class="anchor" href="#collapsed-collapsed" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>collapsed [collapsed]</h3>
+
+<p>Type: <code>boolean</code></p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">div</span> ui-layout&gt;
+    &lt;<span class="pl-ent">div</span> ui-layout-container <span class="pl-e">collapsed</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+    &lt;<span class="pl-ent">div</span> ui-layout-container <span class="pl-e">collapsed</span>=<span class="pl-s"><span class="pl-pds">"</span>layout.mycontainer<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;    
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>Controls collapsed state of the container. Application can store the state of the layout e.g. like so:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-smi">layout</span> {
+  toolbar<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+  leftSidebar<span class="pl-k">:</span> <span class="pl-c1">false</span>,
+  mycontainer<span class="pl-k">:</span> <span class="pl-c1">false</span>
+}</pre></div>
+
+<p>Changing those values will toggle container. See also [<code>ui.layout.toggle</code>][event-toggle]. </p>
+
+<h3>
+<a id="size" class="anchor" href="#size" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>size</h3>
+
+<p>Type: <code>String</code></p>
+
+<p>Sets the default placement of the splitbar.</p>
+
+<pre><code>pixels
+&lt;div ui-layout&gt;
+    &lt;div ui-layout-container size="100px"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+percentage
+&lt;div ui-layout&gt;
+    &lt;div ui-layout-container size="10%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>
+<a id="minsize" class="anchor" href="#minsize" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>minSize</h3>
+
+<p>Type: <code>String</code>
+Default: <code>'8px'</code></p>
+
+<p>Specifices the minimum size the child element can be set to. Defaults to the width of the <code>splitbar</code> if no value is provided.</p>
+
+<pre><code>pixels
+&lt;div ui-layout&gt;
+    &lt;div ui-layout-container min-size="100px"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+percentage
+&lt;div ui-layout&gt;
+    &lt;div ui-layout-container min-size="10%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>
+<a id="maxsize" class="anchor" href="#maxsize" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>maxSize</h3>
+
+<p>Type: <code>String</code></p>
+
+<p>Specifices the maxium size the child element can be set to.</p>
+
+<pre><code>pixels
+&lt;div ui-layout&gt;
+    &lt;div ui-layout-container max-size="100px"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+percentage
+&lt;div ui-layout&gt;
+    &lt;div ui-layout-container max-size="10%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>
+<a id="events" class="anchor" href="#events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Events</h2>
+
+<p>Events are broadcast on the scope where ui-layout is attached. This means they are available to any controller inside of a ui-layout container. </p>
+
+<h3>
+<a id="uilayoutloaded" class="anchor" href="#uilayoutloaded" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ui.layout.loaded</h3>
+
+<p>Returns: <code>string</code> or <code>null</code></p>
+
+<p>Dispatched when the layout container finished loading. It returns the value of the attribute, e.g. <code>ui-layout-loaded="my-loaded-message"</code>, or <code>null</code>. The <code>null</code> also means that the layout has finished collapsing all the containers that should be collapsed (per application request when setting the [<code>collapsed</code>][collapsed] attribute).</p>
+
+<p>Collapsing container on application load currently goes through these steps:
+1. layout is first loaded with all containers uncollapsed (disregarding user set values), then
+2. containers are collapsed either:</p>
+
+<ul>
+<li>
+<em>automatically</em>: application has not set a string return value for the <code>ui.layout.loaded</code> event.</li>
+<li>
+<em>manually</em>: application sets collapsed flags in the callback passed to <code>ui.layout.loaded</code>
+</li>
+</ul>
+
+<p>All this means that the user will notice a flicker. If the flicker is not desirable, hide the layout behind an overlay, wait for the <code>ui.layout.loaded</code> event. In the "automatic" mode, all is done and the layout should be presentable. In the "manual" mode it is up to the application to count the <code>ui.layout.toggle</code> events.</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>main-container<span class="pl-pds">"</span></span> ui-layout ui-layout-loaded&gt;
+    &lt;<span class="pl-ent">div</span> ui-layout-container&gt;
+      &lt;<span class="pl-ent">div</span> ui-layout <span class="pl-e">ui-layout-loaded</span>=<span class="pl-s"><span class="pl-pds">"</span>child-container<span class="pl-pds">"</span></span>&gt;
+          &lt;<span class="pl-ent">div</span> ui-layout-container&gt;
+
+          &lt;/<span class="pl-ent">div</span>&gt;
+      &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-en">$on</span>(<span class="pl-s"><span class="pl-pds">'</span>ui.layout.loaded<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(<span class="pl-smi">evt</span>, <span class="pl-smi">id</span>) =&gt; {
+  <span class="pl-k">switch</span> (id) {
+    <span class="pl-k">case</span> <span class="pl-s"><span class="pl-pds">'</span>main-container<span class="pl-pds">'</span></span><span class="pl-k">:</span>
+      <span class="pl-k">...</span>
+      <span class="pl-k">break</span>;
+    <span class="pl-k">case</span> <span class="pl-s"><span class="pl-pds">'</span>child-container<span class="pl-pds">'</span></span><span class="pl-k">:</span>
+      <span class="pl-k">...</span>
+      <span class="pl-k">break</span>;
+    <span class="pl-k">default</span><span class="pl-k">:</span>
+      <span class="pl-k">break</span>;
+  }
+});</pre></div>
+
+<p>Note: the value of the attribute is not evaluated, so:</p>
+
+<pre><code>$scope.layout = {
+  mySidebar: {someKey: 'some value'}
 }
 
-.layout-mock .center-back{
-  background-image: url("http://placehold.it/400x300/eee/666&text=CENTER");
-}</pre>
-          </div>
-        </tab>
-      </tabset>
+&lt;div id='my-sidebar' ui-layout ui-layout-loaded="layout.mySidebar.someKey"&gt;&lt;/div&gt;
+// $scope.$on will receive the string 'layout.mySidebar.someKey'
+</code></pre>
+
+<h3>
+<a id="uilayouttoggle-event-toggle" class="anchor" href="#uilayouttoggle-event-toggle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ui.layout.toggle [event-toggle]</h3>
+
+<p>Dispatched when a container is opened or closed. Element can be identified <code>container.id</code>, which is the same as <code>element.id</code> if provided, otherwise it is <code>null</code>.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-en">$on</span>(<span class="pl-s"><span class="pl-pds">'</span>ui.layout.toggle<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(<span class="pl-smi">e</span>, <span class="pl-smi">container</span>){
+  <span class="pl-k">if</span> ( <span class="pl-smi">container</span>.<span class="pl-c1">size</span> <span class="pl-k">&gt;</span> <span class="pl-c1">0</span> ){
+     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>container is open!<span class="pl-pds">'</span></span>);
+  }
+});</pre></div>
+
+<p>Manually toggling (clicking the arrow button on the splitbar) will not update the <code>collapsed</code> attribute. 
+If the application is using the <code>collapsed</code> attribute of <code>ui-layout-container</code> to programmatically control the collapsed state, the application should update it's state when this event occurs to stay in sync with the UI. </p>
+
+<h3>
+<a id="uilayoutresize" class="anchor" href="#uilayoutresize" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ui.layout.resize</h3>
+
+<p>Dispatched as a splitbar is dragged, debounced to occur only every 50ms.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">$scope</span>.<span class="pl-en">$on</span>(<span class="pl-s"><span class="pl-pds">'</span>ui.layout.resize<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(<span class="pl-smi">e</span>, <span class="pl-smi">beforeContainer</span>, <span class="pl-smi">afterContainer</span>){});</pre></div>
+
+<h2>
+<a id="testing" class="anchor" href="#testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing</h2>
+
+<p>We use Karma and jshint to ensure the quality of the code.  The easiest way to run these checks is to use grunt:</p>
+
+<div class="highlight highlight-source-shell"><pre>npm install -g gulp
+npm install <span class="pl-k">&amp;&amp;</span> bower install
+gulp</pre></div>
+
+<p>The karma task will try to open Firefox and Chrome as browser in which to run the tests.  Make sure this is available or change the configuration in <code>test\karma-jqlite.conf.js</code> and <code>test\karma-jquery.conf.js</code></p>
+
+<p>Some test tasks :</p>
+
+<ul>
+<li>
+<code>gulp karma</code> : Will run <em>jqlite</em> and <em>jquery</em> tests in simple run mode,</li>
+<li>
+<code>gulp karma:jqlite:unit</code> : Will run <em>jqlite</em> tests in simple run mode,</li>
+<li>
+<code>gulp karma:jquery:unit</code> : Will run <em>jquery</em> tests in simple run mode,</li>
+<li>
+<code>gulp karma:jqlite:watch</code> : Will run <em>jqlite</em> tests and watch for changes,</li>
+<li>
+<code>gulp karma:jquery:watch</code> : Will run <em>jquery</em> tests and watch for changes,</li>
+</ul>
+
+<p>** <code>gulp serve</code> runs and watches all**</p>
+      </section>
     </div>
-  </div>
-</div>
 
-
-
-<!-- =Holy grail
---------------------------------------------------------------------------- -->
-<div id="demo-mini">
-  <div class="page-header">
-    <h1>Holy grail demo</h1>
-  </div>
-
-  <div style="position: relative; height: 500px;">
-
-    <div ui-layout class="layout-mock">
-      <header class="north-back"></header>
-      <ui-layout options="{ flow : 'column' }">
-        <sidebar class="east-back"></sidebar>
-        <div class="center-back"></div>
-        <sidebar class="west-back"></sidebar>
-      </ui-layout>
-      <footer class="south-back"></footer>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ui-layout maintained by <a href="https://github.com/dark-gray">dark-gray</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
 
-  </div>
+    
 
-  <hr>
-
-  <div ng-controller="PlunkerCtrl"
-       ng-init="
-vendor_css=['https://rawgithub.com/angular-ui/ui-layout/master/src/ui-layout.css'];
-vendor_js=['https://rawgithub.com/angular-ui/ui-layout/master/src/ui-layout.js'];
-    "
-      >
-    <div class="pull-right">
-      <button class="btn btn-info" ng-click="edit('1.2.6', 'UI.Layout', 'ui-layout')">
-        <i class="glyphicon glyphicon-edit"></i> Edit in plunker
-      </button>
-    </div>
-
-    <tabset>
-      <tab heading="Markup">
-        <div plunker-content="markup">
-<pre class="prettyprint">&lt;div ui-layout class=&quot;layout-mock&quot;&gt;
-  &lt;header class=&quot;north-back&quot;&gt;&lt;/header&gt;
-  &lt;ui-layout options=&quot;{ flow : &#39;column&#39; }&quot;&gt;
-    &lt;sidebar class=&quot;east-back&quot;&gt;&lt;/sidebar&gt;
-    &lt;div class=&quot;center-back&quot;&gt;&lt;/div&gt;
-    &lt;sidebar class=&quot;west-back&quot;&gt;&lt;/sidebar&gt;
-  &lt;/ui-layout&gt;
-  &lt;footer class=&quot;south-back&quot;&gt;&lt;/footer&gt;
-&lt;/div&gt;</pre>
-        </div>
-      </tab>
-      <tab heading="CSS">
-        <div plunker-content="css">
-<pre class="prettyprint">.layout-mock *:not(.ui-splitbar){
-  background : #eee no-repeat center;
-}
-
-
-.layout-mock .center-back{
-  background-image: url("http://placehold.it/400x300/eee/666&text=CENTER");
-}
-.layout-mock .north-back{
-  background-image: url("http://placehold.it/400x300/eee/666&text=NORTH");
-}
-.layout-mock .south-back{
-  background-image: url("http://placehold.it/400x300/eee/666&text=SOUTH");
-}
-.layout-mock .east-back{
-  background-image: url("http://placehold.it/400x300/eee/666&text=EAST");
-}
-.layout-mock .west-back{
-  background-image: url("http://placehold.it/400x300/eee/666&text=WEST");
-}
-</pre>
-        </div>
-      </tab>
-    </tabset>
-  </div>
-</div>
-
-</section>
-
-</div>
-
-<!-- Le javascript
-================================================== -->
-<script src="assets/vendor/prettify.js"></script>
-
-<script src="assets/vendor/angular.min.js"></script>
-<script src="assets/vendor/ui-bootstrap-tpls.min.js"></script>
-<script src="core/prettifyDirective.js"></script>
-<script src="core/plunker.js"></script>
-
-<script src="dist/ui-layout.js"></script>
-
-
-<script>
-  angular.module('doc.ui-layout', ['ui.layout', 'prettifyDirective', 'ui.bootstrap', 'plunker' ]);
-</script>
-
-</body>
-
+  </body>
 </html>
