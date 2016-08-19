@@ -11,7 +11,8 @@ before_install:
 - bower install --force
 - bower install --force
 after_success:
-- ./node_modules/angular-ui-publisher/travis/authentication.sh || exit 0
+#- ./node_modules/angular-ui-publisher/travis/authentication.sh || exit 0
+- exit 0
 - gulp dist
 - gulp build --branch=bower
 - gulp publish --branch=bower
