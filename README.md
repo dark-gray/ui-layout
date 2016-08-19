@@ -1,6 +1,6 @@
 ### _**Forked from [angular-ui/ui-layout](https://github.com/angular-ui/ui-layout)**_
 
-# UI.Layout directive [![Build Status](https://travis-ci.org/angular-ui/ui-layout.svg)](https://travis-ci.org/angular-ui/ui-layout)
+# UI.Layout directive [![Build Status](https://travis-ci.org/dark-gray/ui-layout.svg)](https://travis-ci.org/dark-gray/ui-layout)
 
 This directive allows you to split stuff !
 [Holy grail demo](http://plnkr.co/zB4mhgJyVz7GlwG8JmeM)
@@ -201,6 +201,19 @@ percentage
 <div ui-layout>
     <div ui-layout-container max-size="10%"></div>
 </div>
+```
+
+### cookieName
+
+Type: `String`
+
+Set this option if you want to save a current size of the container in cookies with the specified name. Remember, that this name must be unique.
+
+```html
+<div ui-layout>
+    <div ui-layout-container cookie-name="unique-name"></div>
+</div>
+
 ```
 
 ## Events
