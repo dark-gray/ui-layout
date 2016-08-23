@@ -207,11 +207,11 @@ percentage
 
 Type: `String`
 
-Set this option if you want to save a current size of the container in cookies with the specified name. Remember, that this name must be unique.
+Set this option if you want to save a current size of the container in the cookies with the specified name. Remember that this name must be unique.
 
 ```html
 <div ui-layout>
-    <div ui-layout-container cookie-name="unique-name"></div>
+    <div ui-layout-container cookie-name="some-unique-name"></div>
 </div>
 
 ```
