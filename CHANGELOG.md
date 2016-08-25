@@ -3,13 +3,19 @@
 
 ### [Full Changelog](https://github.com/dark-gray/ui-layout/compare/v1.4.2...v1.5.0)
 
+### Features
+* Added 'cookie-name' parameter.
+
+### Bug Fixes
+* Fixed some errors with sizes of containers and splitbars.
+
 
 <a name="1.4.2"></a>
-# [1.4.2](https://github.com/angular-ui/ui-layout/compare/v1.4.1...v1.4.2)
+## [1.4.2](https://github.com/angular-ui/ui-layout/compare/v1.4.1...v1.4.2)
 
 
 <a name="1.4.1"></a>
-# [1.4.1](https://github.com/angular-ui/ui-layout/compare/v1.4.0...v1.4.1)
+## [1.4.1](https://github.com/angular-ui/ui-layout/compare/v1.4.0...v1.4.1)
 
 
 <a name="1.4.0"></a>
@@ -18,7 +24,7 @@
 
 
 <a name="1.3.1"></a>
-# [1.3.1](https://github.com/angular-ui/ui-layout/compare/v1.3.0...v1.3.1)
+## [1.3.1](https://github.com/angular-ui/ui-layout/compare/v1.3.0...v1.3.1)
 
 
 <a name="1.3.0"></a>
