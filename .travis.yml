@@ -5,18 +5,18 @@ git:
   depth: 10
 before_install:
 - export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
-- npm install -qg bower gulp
-- npm install -q
-- bower install --force
-- bower install --force
+#- sh -e /etc/init.d/xvfb start
+#- npm install -qg bower gulp
+#- npm install -q
+#- bower install --force
+#- bower install --force
 after_success:
 #- ./node_modules/angular-ui-publisher/travis/authentication.sh || exit 0
 - exit 0
-- gulp dist
-- gulp build --branch=bower
-- gulp publish --branch=bower
-script: gulp
+#- gulp dist
+#- gulp build --branch=bower
+#- gulp publish --branch=bower
+#script: gulp
 env:
   global:
   - REPO="git@github.com:dark-gray/ui-layout.git"
