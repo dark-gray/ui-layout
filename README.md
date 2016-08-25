@@ -102,6 +102,13 @@ Default: `false`
 
 Like `disableToggle` above but only removes the arrows on mobile devices (max-device-width: 480px).
 
+### animate
+
+Type: `Boolean`
+Default: `false`
+
+Set to `true` if you don't need the animation of actions.
+
 
 ## Child Attributes
 
