@@ -23,6 +23,7 @@ angular.module('ui.layout', ['ngCookies'])
       ctrl.containers = [];
       ctrl.movingSplitbar = null;
       ctrl.bounds = $element[0].getBoundingClientRect();
+      ctrl.animate = opts.animate;
       ctrl.isUsingColumnFlow = opts.flow === 'column';
       ctrl.sizeProperties = !ctrl.isUsingColumnFlow ?
       { sizeProperty: 'height',
@@ -706,8 +707,10 @@ angular.module('ui.layout', ['ngCookies'])
         if(!element.hasClass('stretch')) element.addClass('stretch');
         if(!element.hasClass('ui-splitbar')) element.addClass('ui-splitbar');
 
-        var animationClass = ctrl.isUsingColumnFlow ? 'animate-column' : 'animate-row';
-        element.addClass(animationClass);
+        if (ctrl.animate !== false) {
+          var animationClass = ctrl.isUsingColumnFlow ? 'animate-column' : 'animate-row';
+          element.addClass(animationClass);
+        }
 
         scope.splitbar = LayoutContainer.Splitbar();
         scope.splitbar.element = element;
@@ -948,8 +951,10 @@ angular.module('ui.layout', ['ngCookies'])
                 if(!element.hasClass('stretch')) element.addClass('stretch');
                 if(!element.hasClass('ui-layout-container')) element.addClass('ui-layout-container');
 
-                var animationClass = ctrl.isUsingColumnFlow ? 'animate-column' : 'animate-row';
-                element.addClass(animationClass);
+                if (ctrl.animate !== false) {
+                  var animationClass = ctrl.isUsingColumnFlow ? 'animate-column' : 'animate-row';
+                  element.addClass(animationClass);
+                }
 
                 scope.$watch('collapsed', function (val, old) {
                   if (angular.isDefined(old) && val !== old) {

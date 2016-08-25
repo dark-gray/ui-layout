@@ -1,7 +1,16 @@
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/dark-gray/ui-layout/tree/1.6.0)
+
+### [See changes](https://github.com/dark-gray/ui-layout/compare/v1.5.0...v1.6.0)
+
+### Features
+* Added an option 'animate' to disable the animation of actions.
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/dark-gray/ui-layout/tree/1.5.0)
 
-### [Full Changelog](https://github.com/dark-gray/ui-layout/compare/v1.4.2...v1.5.0)
+### [See changes](https://github.com/dark-gray/ui-layout/compare/v1.4.2...v1.5.0)
 
 ### Features
 * Added 'cookie-name' parameter.
